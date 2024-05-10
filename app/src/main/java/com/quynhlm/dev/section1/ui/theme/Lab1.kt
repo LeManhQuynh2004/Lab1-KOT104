@@ -15,7 +15,7 @@ fun Lesson_1() {
     println("\tCó chồng hờ hững cũng như không")
 }
 
-fun input(): Pair<Int, Int> {
+fun input() : Pair<Int, Int> {
     while (true) {
         try {
             val scanner = Scanner(System.`in`)
@@ -55,7 +55,6 @@ fun Lesson_2() {
                 val (a, b) = input()
                 println("Tích của hai số là ${a * b}")
             }
-
             4 -> {
                 val (a, b) = input()
                 if (a <= 0 || b <= 0) {
