@@ -54,7 +54,6 @@ fun main(){
                 }
             }
             3 -> {
-
                 println("Enter student MSSV:")
                 val mssvUpdate = readLine().orEmpty()
 
@@ -78,7 +77,7 @@ fun main(){
 
                 val newStudent = Student(name, mssv, mediumScore, age, graduated)
 
-                var check = studentManager.updateStudent(mssv,newStudent)
+                var check = studentManager.updateStudent(mssvUpdate,newStudent)
 
                 if(check == true){
                     println("Sửa thành công")

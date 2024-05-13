@@ -13,17 +13,19 @@ class StudentManager {
         this.array.remove(student)
         return true
     }
-    fun updateStudent (MSSA : String , student: Student) : Boolean{
-        var studentUpdate = array.stream().filter{ s -> s.MSSV.equals(MSSA)}.findFirst().orElse(null)
+    fun updateStudent (Id : String , student: Student) : Boolean{
+        println("ID cần sửa là :" + Id)
+        var studentUpdate = this.array.stream().filter{ s -> s.MSSV.equals(Id)}.findFirst().orElse(null)
         if(studentUpdate == null){
             return false
         }
-        studentUpdate.name = student.name
-        studentUpdate.age = student.age
-        studentUpdate.MSSV = student.MSSV
-        studentUpdate.mediumScore = student.mediumScore
-        studentUpdate.graduated = student.graduated
-
+            studentUpdate.apply {
+                name = student.name
+                age = student.age
+                MSSV = student.MSSV
+                mediumScore = student.mediumScore
+                graduated = student.graduated
+            }
         println("Thông tin sau khi thay đổi :")
         println(student.toString())
         return true
